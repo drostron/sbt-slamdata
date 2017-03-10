@@ -8,6 +8,7 @@ lazy val root = Project("root", file("."))
     description  := "Common build configuration for SBT projects",
     sbtPlugin    := true)
   .settings(
+    addSbtPlugin("io.get-coursier"   % "sbt-coursier"    % BuildInfo.sbtCoursierVersion),
     addSbtPlugin("com.jsuereth"      % "sbt-pgp"         % BuildInfo.sbtPgpVersion),
     addSbtPlugin("com.github.gseitz" % "sbt-release"     % BuildInfo.sbtReleaseVersion),
     addSbtPlugin("org.xerial.sbt"    % "sbt-sonatype"    % BuildInfo.sbtSonatypeVersion),
